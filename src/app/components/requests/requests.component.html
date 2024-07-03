@@ -1,0 +1,11 @@
+<div class="flex column gap-1em card">
+    <mat-card class="half-width" *ngFor="let inviteItem of invites">
+        <div class="flex  space-between">
+            <h2>{{ inviteItem.username }}</h2>
+            <div class="button flex gap-05 center-center">
+                <button mat-raised-button class="btn" (click)="accept(inviteItem)">Accept invite</button>
+                <button mat-raised-button color="warn" (click)="delete(inviteItem)">Delete</button>
+            </div>
+        </div>
+    </mat-card>
+</div>

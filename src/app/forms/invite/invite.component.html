@@ -1,0 +1,25 @@
+<mat-card class="full-height full-width card">
+    <form class="example-form" [formGroup]="inviteForm">
+        <div class="flex center-center gap-05">
+
+            <h2 >
+                Invite message
+            </h2>
+            <img src="../../../assets/images/chatterbox.png" width="60px" alt="">
+
+        </div>
+       
+        <mat-form-field class="example-full-width full-width">
+          <mat-label>Send an invite message</mat-label>
+          <textarea type="text" matInput formControlName="message" class="full-width" required>
+            Hi I'd like to invite you to chat
+          </textarea>
+        </mat-form-field>
+    
+        <div class="flex gap-1em center-center">
+            <button mat-raised-button color="warn" (click)="close()">Close</button>
+            <button mat-raised-button class="btn" (click)="invite()">Invite</button>
+
+        </div>
+      </form>
+</mat-card>

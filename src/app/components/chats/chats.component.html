@@ -1,0 +1,27 @@
+<div class="main-containerr full-width">
+    <div class="container flex column full-height full-width">
+        <div class="chats flex column ">
+            <mat-card class="sent" *ngFor="let text of sentText">
+                <h4>
+                    {{ text }}
+                </h4>
+            </mat-card>
+
+            <div class="response">
+                <mat-card class="received"  *ngFor="let received of receivedText">
+                    <h4>
+                        {{received}}
+                    </h4>
+                </mat-card>
+            </div>
+        </div>
+        <div class="keyboard flex full-width">
+            <form [formGroup]="chats" class="full-width">
+                <input type="text" placeholder="Type a message" formControlName="text" (keyup.enter)="onEnterPressed()">
+            </form>
+            <span class="material-symbols-outlined flex center-center gap-1em mic">
+                mic
+            </span>
+        </div>
+    </div>
+</div>

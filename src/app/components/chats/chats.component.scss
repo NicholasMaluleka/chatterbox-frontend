@@ -1,0 +1,67 @@
+//keyboard
+.keyboard{
+   background-color: #f5f5f5;
+   height: 12%;
+   padding: 10px;
+   box-sizing: border-box;
+}
+
+.keyboard input{
+    width: 90%;
+    border-radius: 7px;
+    border: .5 solid darkgray;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+//chats
+.chats{
+    height: 90%;
+    overflow: hidden;
+}
+
+mat-card{
+    width: auto !important;
+}
+
+h4{
+    margin: 0;
+    width: auto;
+}
+
+
+.sent{
+    width: auto;
+    max-width: 26%;
+    margin-left: 3em;
+    margin-top: 1em;
+    padding: 5px;
+}
+
+.response{
+    justify-content: end;
+    display: flex;
+    margin-right: 3em;
+    margin-top: 1em;
+}
+
+.received{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: auto;
+    max-width: 26%;
+    background-color: #d9fdd3;
+    padding: 5px;
+    border-top-right-radius: -100px;
+}
+
+.mic{
+    height: 100%;
+    font-size: 40px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}

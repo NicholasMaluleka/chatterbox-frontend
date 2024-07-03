@@ -1,0 +1,35 @@
+<mat-toolbar>
+    
+   <span></span>
+   <span  class="example-spacer home flex text-center gap-05">
+    <img src="../../../assets/images/chatterbox.png" height="50px" alt="" (click)="home()">
+     <h1 class="flex center-center">{{user.username}}</h1>
+    </span>
+   
+   <button mat-icon-button matTooltip="View friends" class="example-icon favorite-icon" (click)="friends()">
+    <span class="material-symbols-outlined">
+        groups
+        </span>
+   </button>
+
+   <button mat-icon-button class="example-icon" matTooltip="Add friend" (click)="search()">
+    <span class="material-symbols-outlined"  >
+        add
+        </span>
+  </button>
+
+  <button mat-icon-button class="example-icon relative" matTooltip="friend requests" (click)="requests()">
+    <span class="material-symbols-outlined">
+        person_add
+        </span>
+        <div class="absolute flex center-center" *ngIf="friendReq > 0">
+          {{friendReq}}
+        </div>
+  </button>
+
+  <button mat-icon-button class="example-icon" matTooltip="logout" (click)="logout()">
+    <span class="material-symbols-outlined">
+        logout
+        </span>
+  </button>
+ </mat-toolbar>

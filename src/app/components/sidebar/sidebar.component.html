@@ -1,0 +1,16 @@
+<div class="main-container side">
+    <div class="search flex center-center full-width">
+        <input type="search" class="searcher" placeholder="Search">
+    </div>
+
+    <div class="contacts  flex column full-width" *ngFor="let acceptedItem of accepted">
+        <div class="ain flex space-between">
+            <h2>
+                {{acceptedItem.username}}
+            </h2>
+            <div class="button">
+                <button mat-raised-button class="btn" (click)="accept(acceptedItem)" >Chat</button>
+            </div>
+        </div>
+    </div>
+</div>

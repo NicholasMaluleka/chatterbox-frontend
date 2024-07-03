@@ -1,0 +1,74 @@
+<div class="main-container body">
+
+    <div class="full-width full-height flex center-center">
+
+        <div class="width-70 flex gap-1em center-center full-height">
+            <img src="../../../assets/images/chatterbox.png" height="40%" alt="">
+
+            <div class="example-container">
+                <mat-card>
+                    <form [formGroup]="register">
+                        <h1 class="flex center-center">
+                            Register on ChatterBox
+                        </h1>
+                        <mat-form-field appearance="fill" class="full-width">
+                            <mat-label>Enter your email</mat-label>
+                            <input type="email" matInput placeholder="pat@example.com" formControlName="email" required>
+                            <mat-error *ngIf="register.get('email')?.hasError('required')">
+                                username is <strong>Required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+
+                        <mat-form-field appearance="fill" class="full-width">
+                            <mat-label>Enter your username</mat-label>
+                            <input type="text" matInput placeholder="Nicholas" formControlName="username" required>
+                            <mat-error *ngIf="register.get('username')?.hasError('required')">
+                                username is <strong>Required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <div class="flex center-center gap-1em">
+
+                            <mat-form-field appearance="fill" class="full-width">
+                                <mat-label>Create your password</mat-label>
+                                <input type="password" matInput placeholder="*****" formControlName="password"
+                                    minlength="4" maxlength="8" required>
+                                <mat-error *ngIf="register.get('password')?.hasError('minlength')">
+                                    Password should be 4 - 8 characters
+                                </mat-error>
+                                <mat-error *ngIf="register.get('password')?.hasError('required')">
+                                    Password is <strong>Required</strong>
+                                </mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill" class="full-width">
+                    <mat-label>Confirm your password</mat-label>
+                                <input type="password" matInput placeholder="*****" formControlName="confirmPassword"
+                                    required>
+                                <mat-error *ngIf="register.get('confirmPassword')?.hasError('required')">
+                                    confirmPassword is <strong>Required</strong>
+                                </mat-error>
+                            </mat-form-field>            
+                        </div>
+
+                        <mat-form-field appearance="fill" class="full-width hide">
+                            <mat-label>status</mat-label>
+                            <input type="text" matInput placeholder="*****" formControlName="status">
+                        </mat-form-field>
+
+                        <h4 (click)="login()">
+                            - Have an account? Login! -
+                        </h4>
+
+
+                        <div class="flex center-center gap-1em">
+                            <button mat-raised-button class="reset" color="warn" (click)="reset()">Reset</button>
+                            <button mat-raised-button class="submit" (click)="submit()">Submit</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

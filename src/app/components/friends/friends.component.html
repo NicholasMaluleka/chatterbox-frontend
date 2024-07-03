@@ -1,0 +1,15 @@
+<div class="flex column gap-1em card">
+    <mat-card class="half-width" *ngFor="let acceptedItem of accepted">
+        <div class="flex  space-between">
+            <h2>{{ acceptedItem.username }}</h2>
+            <div class="button flex center-center">
+                <button mat-raised-button class="btn">Chat</button>
+            </div>
+        </div>
+        <div>
+            <h3>
+            chat with {{acceptedItem.username}}
+            </h3>
+        </div>
+    </mat-card>
+</div>

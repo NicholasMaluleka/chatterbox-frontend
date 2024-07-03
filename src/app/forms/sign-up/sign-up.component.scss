@@ -1,0 +1,32 @@
+h4 {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 1em;
+    color: black;
+}
+
+h4:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+mat-card {
+    padding: 10px;
+    border: .5px solid grey;
+    box-shadow: 2px 1px;
+}
+
+.submit {
+    background-color: #77b3d4 !important;
+    color: white !important;
+}
+
+.hide {
+    display: none;
+}
+
+.body {
+    background-color: white !important;
+    height: 100vh;
+}

@@ -1,0 +1,12 @@
+<mat-card class="full-width">
+    <h1 class="flex center-center">
+       <b>Enter a username</b> 
+    </h1>
+    <form [formGroup]="searcher" class="full-width">
+    <input type="text" placeholder="Ex. Dineo" formControlName="search">
+    </form>
+    <div class="flex center-center gap-1em">
+        <button mat-raised-button color="warn" (click)="close()">Close</button>
+        <button mat-raised-button class="search" (click)="search()">Search</button>
+    </div>
+</mat-card>

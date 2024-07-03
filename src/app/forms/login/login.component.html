@@ -1,0 +1,43 @@
+<div class="main-container body">
+
+    <div class="full-width full-height flex center-center">
+
+        <div class="width-70 gap-1em flex center-center full-height">
+            <img src="../../../assets/images/chatterbox.png" height="40%" alt="">
+
+            <div class="example-container">
+                <mat-card>
+                    <form [formGroup]="loginForm">
+                        <h1 class="flex center-center">
+                            Login to ChatterBox
+                        </h1>
+                        <mat-form-field appearance="fill" class="full-width">
+                            <mat-label>Enter your email</mat-label>
+                            <input type="email" matInput placeholder="pat@example.com" formControlName="email" required>
+                          </mat-form-field>
+
+                          <mat-form-field appearance="fill" class="full-width">
+                            <mat-label>Enter your password</mat-label>
+                            <input type="password" matInput placeholder="*****" formControlName="password" required>
+                          </mat-form-field>
+                        <h4 (click)="register()">
+                            - Aren't registered? sign-up! -
+                        </h4>
+                         
+
+                          <div class="flex center-center gap-1em">
+                            <button mat-raised-button class="reset"
+                             color="warn" (click)="reset()">Reset</button>
+                            <button mat-raised-button class="submit" (click)="submit()">Submit</button>
+                          </div>
+                    </form>
+                </mat-card>
+                
+              </div>
+        </div>
+
+
+
+    </div>
+
+</div>
